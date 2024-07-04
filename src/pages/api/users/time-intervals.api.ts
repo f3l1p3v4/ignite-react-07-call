@@ -5,14 +5,14 @@ import { prisma } from '../../../lib/prisma'
 import { buildNextAuthOptions } from '../auth/[...nextauth].api'
 
 const timeIntervalsBodySchema = z.object({
-    intervals: z.array(
-      z.object({
-        weekDay: z.number(),
-        startTimeInMinutes: z.number(),
-        endTimeInMinutes: z.number(),
-      }),
-    ),
-  })
+  intervals: z.array(
+    z.object({
+      weekDay: z.number(),
+      startTimeInMinutes: z.number(),
+      endTimeInMinutes: z.number(),
+    }),
+  ),
+})
 
 export default async function handler(
   req: NextApiRequest,

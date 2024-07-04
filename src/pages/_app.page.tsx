@@ -16,7 +16,7 @@ export default function App({
   return (
     <QueryClientProvider client={queryClient}>
       <SessionProvider session={session}>
-      <DefaultSeo
+        <DefaultSeo
           openGraph={{
             type: 'website',
             locale: 'pt_BR',
@@ -24,7 +24,7 @@ export default function App({
             siteName: 'Ignite Call',
           }}
         />
-        
+
         <Component {...pageProps} />
       </SessionProvider>
     </QueryClientProvider>

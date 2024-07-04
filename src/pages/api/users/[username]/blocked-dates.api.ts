@@ -58,7 +58,6 @@ export default async function handler(
   //   HAVING amount >= size
   // `
 
-
   // POSTGRESQL
   const blockedDatesRaw: Array<{ date: number }> = await prisma.$queryRaw`
   SELECT
