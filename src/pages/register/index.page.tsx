@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { api } from '../../lib/axios'
+import { NextSeo } from 'next-seo'
 
 import { Container, Form, FormError, Header } from './styles'
 
@@ -62,6 +63,8 @@ export default function Register() {
   }
 
   return (
+    <>
+    <NextSeo title="Crie uma conta | Ignite Call" />
     <Container>
       <Header>
         <Heading as="strong">Bem-vindo ao Ignite Call!</Heading>
@@ -102,5 +105,6 @@ export default function Register() {
         </Button>
       </Form>
     </Container>
+    </>
   )
 }

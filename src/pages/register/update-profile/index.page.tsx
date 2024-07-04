@@ -16,6 +16,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { api } from '../../../lib/axios'
 import { buildNextAuthOptions } from '../../api/auth/[...nextauth].api'
+import { NextSeo } from 'next-seo'
 
 import { Container, Header } from '../styles'
 import { FormAnnotation, ProfileBox } from './styles'
@@ -47,6 +48,8 @@ export default function UpdateProfile() {
   }
 
   return (
+    <>
+    <NextSeo title="Atualize seu perfil | Ignite Call" noindex />
     <Container>
       <Header>
         <Heading as="strong">Bem-vindo ao Ignite Call!</Heading>
@@ -82,6 +85,7 @@ export default function UpdateProfile() {
         </Button>
       </ProfileBox>
     </Container>
+    </>
   )
 }
 

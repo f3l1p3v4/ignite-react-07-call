@@ -12,8 +12,10 @@ import { ArrowRight } from 'phosphor-react'
 import { Controller, useFieldArray, useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { api } from '../../../lib/axios'
-import { convertTimeStringToMinutes } from '../../utils/convert-time-string-to-minutes'
-import { getWeekDays } from '../../utils/get-week-days'
+import { convertTimeStringToMinutes } from '../../../utils/convert-time-string-to-minutes'
+import { getWeekDays } from '../../../utils/get-week-days'
+import { NextSeo } from 'next-seo'
+
 import { Container, Header } from '../styles'
 
 import {  
@@ -110,6 +112,8 @@ export default function TimeIntervals() {
   }
 
   return (
+    <>
+    <NextSeo title="Selecione sua disponibilidade | Ignite Call" noindex />
     <Container>
       <Header>
         <Heading as="strong">Quase lá</Heading>
@@ -174,5 +178,6 @@ export default function TimeIntervals() {
         </Button>
       </IntervalBox>
     </Container>
+    </>
   )
 }

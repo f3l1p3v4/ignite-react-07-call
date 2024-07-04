@@ -3,6 +3,8 @@ import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import { ArrowRight, Check } from 'phosphor-react'
 // import { api } from "../../../lib/axios"
+import { NextSeo } from 'next-seo'
+
 import { Container, Header } from '../styles'
 import { AuthError, ConnectBox, ConnectItem } from './styles'
 
@@ -22,6 +24,8 @@ export default function ConnectCalendar() {
   }
 
   return (
+    <>
+    <NextSeo title="Conecte sua agenda do Google | Ignite Call" noindex />
     <Container>
       <Header>
         <Heading as="strong">Conecte sua agenda!</Heading>
@@ -70,5 +74,6 @@ export default function ConnectCalendar() {
         </Button>
       </ConnectBox>
     </Container>
+    </>
   )
 }
